@@ -1,18 +1,18 @@
 <프로젝트 개요>
  
  1. Input data 
-   ·n  d   CharArrayOfLengthN 
+   · n  d   CharArrayOfLengthN 
      - d > 0 : clockwise rotation  
      - d < 0 : counterclockwise rotation
 
  2. Program 
-   ·4 functions of rotation returns with result 
+   · 4 functions of rotation returns with result 
      - Trivial solution / juggling / block-swap / reverse 
-   ·Main routine handling I/O and invoke functions 
+   · Main routine handling I/O and invoke functions 
      - Main(): generate test case(input data) to compare time complexity of 4 methods
 
  3. Output data 
-   ·Time elapsed for rotating data for 4 methods respectively 
+   · Time elapsed for rotating data for 4 methods respectively 
      - Series of  4 results to show the difference
 
    - - -
