@@ -56,9 +56,16 @@ Test Case
 10000000     12342              301.276        0.156          0.032       0.046
 50           1                  0              0              0           0  
 10000        6657               1.639          0              0           0
+1000000000   20                 4.695          0.468          0.375       0.298
+356781       -34541             27.955         0.016          0           0
 
+결과 추론
 
-
+계산수행시간은 trivial>juggling>block swap>reverse순이다. 따라서 계산량이 trivial>juggling>block swap>reverse순으로 많다고 생각해 볼 수 있는데 이유를 추론해보자면 
+trivial solution은 str 전체를 옮겨야 하는 과정을 d번 거쳐야 하므로 다른 solution과 n이 같더라도 d 값이 커질수록 시간이 오래 걸린다.
+juggling은 str의 한 원소를 d만큼 자리를 옮기는 과정을 행하므로 str 전체를 옮기는 trivial solution보다는 시간이 적게 걸리지만 원소가 많아질수록 시간이 오래 걸린다.
+block-swap은 str에서 d만큼의 블록을 묶은 후 재귀함수를 이용하여 연속적으로 swap을 수행하기 때문에 한 원소씩 옮기는 trivial, juggling보다 시간이 짧게 걸린다.
+reverse는 처음에 앞 또는 뒤에서 d개의 원소를 reverse하고 그 다음 뒤 또는 앞의 나머지 n - d개의 원소를 reverse한 다음 n개의 원소를 모두 reverse하므로 d값에 상관없이 n의 값에만 영향을 받는다.
 
 
 
